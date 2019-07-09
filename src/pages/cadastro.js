@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class Servicos extends Component {
+export default class Cadastro extends Component {
     static navigationOptions = {
-        title: 'Serviços'
-    }; 
+        title: 'Cadastro'
+    };
 
     render() {
         return(
             <View>
-                <Text>Serviços</Text>
+                <Text>Cadastro</Text>
             </View>
         );
     }
