@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Button, Image, TouchableOpacity, ImageBackground } from 'react-native';
 
 export default class Main extends Component {
     static navigationOptions = {
@@ -20,41 +20,44 @@ export default class Main extends Component {
     
     render() {
         return(
-            <View style={styles.container}>
-                <View>
-                    <TouchableOpacity onPress={this.pressCadastro}>
-                        <Image
-                            style={styles.icone}
-                            source={require('../../img/cadastro.png')}
-                        />
-                        <Text>Cadastro</Text>
-                    </TouchableOpacity>
+            <ImageBackground source={require('../../img/background.png')} style={styles.imagem}>
+                <View style={styles.container}>
+                    <View>
+                        <TouchableOpacity onPress={this.pressCadastro}>
+                            <Image
+                                style={styles.icone}
+                                source={require('../../img/cadastro.png')}
+                            />
+                            <Text>Cadastro</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.botao}>
+                        <TouchableOpacity onPress={this.pressServicos}>
+                            <Image
+                                style={styles.icone}
+                                source={require('../../img/servicos.png')}
+                            />
+                            <Text>Serviços</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.botao}>
+                        <TouchableOpacity onPress={this.pressRelatorios}>
+                            <Image
+                                style={styles.icone}
+                                source={require('../../img/relatorios.png')}
+                            />
+                            <Text>Relatórios</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-                <View style={styles.botao}>
-                    <TouchableOpacity onPress={this.pressServicos}>
-                        <Image
-                            style={styles.icone}
-                            source={require('../../img/servicos.png')}
-                        />
-                        <Text>Serviços</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.botao}>
-                    <TouchableOpacity onPress={this.pressRelatorios}>
-                        <Image
-                            style={styles.icone}
-                            source={require('../../img/relatorios.png')}
-                        />
-                        <Text>Relatórios</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+            </ImageBackground>
         );
     }
 }
 
 const styles = {
     container: {
+        flex: 1,
         paddingTop: 80,
         alignItems: 'center'
     },
@@ -64,5 +67,10 @@ const styles = {
     icone: {
         width: 75,
         height: 75
-    }
+    },
+	imagem: {
+        flex: 1,
+        width: null,
+        height: null
+	}
 };

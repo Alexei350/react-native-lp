@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
 
 export default class Cadastro extends Component {
     static navigationOptions = {
@@ -8,9 +8,19 @@ export default class Cadastro extends Component {
 
     render() {
         return(
-            <View>
-                <Text>Cadastro</Text>
-            </View>
+            <ImageBackground source={require('../../img/background.png')} style={styles.imagem}>
+                <View>
+                    <Text>Cadastro</Text>
+                </View>
+            </ImageBackground>
         );
     }
 }
+
+const styles = {
+	imagem: {
+        flex: 1,
+        width: null,
+        height: null
+	}
+};

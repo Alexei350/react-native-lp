@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
 
 export default class Servicos extends Component {
     static navigationOptions = {
@@ -8,9 +8,19 @@ export default class Servicos extends Component {
 
     render() {
         return(
-            <View>
-                <Text>Serviços</Text>
-            </View>
+            <ImageBackground source={require('../../img/background.png')} style={styles.imagem}>
+                <View>
+                    <Text>Serviços</Text>
+                </View>
+            </ImageBackground>
         );
     }
 }
+
+const styles = {
+	imagem: {
+        flex: 1,
+        width: null,
+        height: null
+	}
+};
