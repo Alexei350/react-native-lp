@@ -28,27 +28,29 @@ export default class Main extends Component {
                                 style={styles.icone}
                                 source={require('../../img/cadastro.png')}
                             />
-                            <Text>Cadastro</Text>
                         </TouchableOpacity>
                     </View>
+                    <Text>Cadastro</Text>
+                    
                     <View style={styles.botao}>
                         <TouchableOpacity onPress={this.pressServicos}>
                             <Image
                                 style={styles.icone}
                                 source={require('../../img/servicos.png')}
                             />
-                            <Text>Serviços</Text>
                         </TouchableOpacity>
                     </View>
+                    <Text>Serviços</Text>
+
                     <View style={styles.botao}>
                         <TouchableOpacity onPress={this.pressRelatorios}>
                             <Image
                                 style={styles.icone}
                                 source={require('../../img/relatorios.png')}
                             />
-                            <Text>Relatórios</Text>
                         </TouchableOpacity>
                     </View>
+                    <Text>Relatórios</Text>
                 </View>
             </ImageBackground>
         );
