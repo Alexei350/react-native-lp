@@ -3,7 +3,7 @@ import { View, Text, Button, Image, TouchableOpacity, ImageBackground } from 're
 
 export default class Main extends Component {
     static navigationOptions = {
-        title: 'Projeto de Navegação'
+        title: 'OS Report'
     };
 
     pressCadastro = () => {
@@ -64,7 +64,7 @@ const styles = {
         alignItems: 'center'
     },
     botao: {
-        paddingTop: 50
+        paddingTop: 40
     },
     icone: {
         width: 75,

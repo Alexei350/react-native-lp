@@ -13,7 +13,12 @@ export default createStackNavigator({
 }, {
     navigationOptions: {
         headerStyle: {
-            backgroundColor: "#0e70ff"
+            backgroundColor: "#0e70ff",
+            borderBottomColor: '#009',
+            borderBottomWidth: 3
+        },
+        headerTitleStyle: {
+          fontSize: 19,
         },
         headerTintColor: "#FFF"
     },
